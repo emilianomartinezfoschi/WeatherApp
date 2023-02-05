@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <title>App del Clima</title>
+</head>
+<body>
+    <div class="base">
+        <div class="grid-container">
+            <div class="titulo">
+                Clima en Ciudades
+            </div>
+            <form action="" method="post" class="formulario">
+                {% csrf_token %}
+                <div class="ingreso">
+                    {{ form }}
+                </div>
+                <div class="enviar">
+                    <input type="submit" value="Enviar" class="sendbutton">
+                </div>
+                <div class="mensaje">
+                    {{ msj|linebreaks }}
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

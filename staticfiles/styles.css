@@ -1,0 +1,234 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.base{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 95vh;
+}
+
+.mainform{
+    width: 80%;
+    color: #42454e;
+    background-color: springgreen;
+    padding: 8px 16px;
+	min-height: 44px;
+    box-sizing: border-box;
+    outline: none;
+	border-radius: 4px;
+	font-size: 16px;
+	border: 1px solid #74777a;
+}
+.mainform:focus{
+	border: 2px solid #222324;
+    background-color: white;
+}
+.sendbutton, .volverboton{
+    box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Verdana;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+	/* width: 25%; */
+}
+.sendbutton:hover, .volverboton:hover{
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color:#468ccf;
+}
+
+.sendbutton:active, .volverboton:active{
+	position:relative;
+	top:1px;
+}
+
+.grid-container{
+	display: grid;
+	grid-template: 25% 75% / 100%;
+	width: 60vw;
+	border: 1px solid black;
+	max-width: 620px;
+	height: 60vh;
+	max-height: 420px;
+	background-image: url("background.jpg");
+	background-size: cover;
+}
+
+.titulo{
+	grid-row: 1/2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	font-size: 2rem;
+	font-family: 'Ultra', serif;
+}
+
+.formulario{
+	display: grid;
+	grid-template: 40% 35% 25% / 100%;
+	grid-row: 2/3;
+}
+
+.ingreso{
+	grid-row: 1/2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.enviar{
+	grid-row: 2/3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.mensaje{
+	grid-row: 3/4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+/* ------------------- Styles for result.html -------------- */
+
+.base-r{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 95vh;
+}
+
+.grid-box{
+	display: grid;
+	grid-template: 10% 30% 10% 50% / 100%;
+	width: 60vw;
+	height: 90vh;
+	min-width: 500px;
+	min-height: 600px;
+	max-width: 650px;
+	max-height: 700px;
+	border: 1px solid black;
+	background-color:honeydew;
+}
+
+.titulo-r{
+	display: flex;
+	grid-row: 1/2;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 0 0 0;
+	font-size: 2rem;
+	font-family: 'Ultra', serif;
+}
+
+.resul{
+	display: flex;
+	grid-row: 2/3;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.volver{
+	display: flex;
+	grid-row: 3/4;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+}
+
+/* .titulo-h{
+	display: flex;
+	grid-row: 4/5;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 0 0 0;
+	font-size: 1rem;
+	font-family: 'Ultra', serif;
+} */
+
+.tabla{
+	display: flex;
+	grid-row: 4/5;
+	justify-content: center;
+	align-items: center;
+}
+
+.temp{
+	font-size: 1.5rem;
+	padding: 0 15px;
+	font-weight: 600;
+}
+
+.resto{
+	padding: 0 15px;
+}
+
+#tabla-r{
+	border-collapse: collapse;
+}
+
+.ciudad-th{
+	width: 15%;
+}
+
+.pais-th{
+	width: 15%;
+}
+
+.temp-th{
+	width: 25%;
+}
+
+.fecha-th{
+	width: 45%;
+}
+
+th, td{
+	padding: 4px;
+	text-align: center;
+}
+
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+.first{
+	background-color: black;
+	color: white;
+}
+
+caption{
+	font-size: 1.2rem;
+	color: rgb(215, 160, 109);
+	font-family: 'Ultra', serif;
+}
+
+  
+tr:nth-child(even) {
+	background-color: #eee;
+}
+
+tr:first-child {
+	background-color: black;
+	color: white;
+}

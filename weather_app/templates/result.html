@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <title>Resultados</title>
+</head>
+<body>
+    <div class="base-r">
+        <div class="grid-box">
+            <div class="titulo-r">
+                RESULTADOS
+            </div>
+            <div class="resul">
+                <span class="temp">Temperatura: {{ form.current.temp_c }}ºC<br>
+                    Ciudad: {{ form.location.name }}<br></span>
+                    <span class="resto">País: {{ form.location.country }}<br>
+                        Sensación Térmica: {{ form.current.feelslike_c }}ºC<br>
+                        Humedad: {{ form.current.humidity }}%<br>
+                        Nubosidad: {{ form.current.cloud }}%<br>
+                        Índice UV: {{ form.current.uv }}<br></span>
+            </div>
+            <div class="volver">
+                <form action="">
+                    <input type="submit" value="Volver" class="volverboton" />
+                </form>
+            </div>
+            <div class="tabla">
+                <table border="1" id="tabla-r">
+                    <caption>ÚLTIMAS BÚSQUEDAS</caption>
+                    <tr class="first">
+                        <th class="ciudad-th">Ciudad</th>
+                        <th class="pais-th">País</th>
+                        <th class="temp-th">Temperatura</th>
+                        <th class="fecha-th">Fecha</th>
+                    </tr>
+                    {% for x in dbtable %}
+                        <tr>
+                            <td>{{ x.city }}</td>
+                            <td>{{ x.country }}</td>
+                            <td>{{ x.temperature }}ºC</td>
+                            <td>{{ x.date }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <!-- {{ table }} -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
