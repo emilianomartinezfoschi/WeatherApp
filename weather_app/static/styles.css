@@ -54,10 +54,10 @@ body {
 .grid-container{
 	display: grid;
 	grid-template: 25% 75% / 100%;
-	width: 60vw;
+	width: 70vw;
 	border: 1px solid black;
 	max-width: 620px;
-	height: 60vh;
+	height: 70vh;
 	max-height: 420px;
 	background-image: url("background.jpg");
 	background-size: cover;
@@ -68,8 +68,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 0;
+	padding: 30px 0 10px 0;
 	font-size: 2rem;
+	text-align: center;
 	font-family: 'Ultra', serif;
 }
 
@@ -103,6 +104,7 @@ body {
 	text-align: center;
 	padding: 10px 0;
 	font-weight: bold;
+	font-size: 0.9rem;
 }
 
 /* ------------------- Styles for result.html -------------- */
@@ -116,11 +118,11 @@ body {
 
 .grid-box{
 	display: grid;
-	grid-template: 10% 30% 10% 50% / 100%;
-	width: 60vw;
+	grid-template: 8% 25% 7% 60% / 100%;
+	width: 90vw;
 	height: 90vh;
-	min-width: 500px;
-	min-height: 600px;
+	/* min-width: 500px;
+	min-height: 600px; */
 	max-width: 650px;
 	max-height: 700px;
 	border: 1px solid black;
@@ -219,4 +221,113 @@ tr:nth-child(even) {
 tr:first-child {
 	background-color: black;
 	color: white;
+}
+
+.titulo-tabla{
+	/* visibility: hidden; */
+	font-size: 0.7rem;
+}
+
+/* ------------------------media queries----------------------------- */
+
+@media screen and (min-aspect-ratio: 1/1){
+	/* body{
+		background-color: orangered;
+	} */
+	/* .titulo{
+		font-size: 1rem;
+	} */
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-device-width: 600px){
+	body{
+		background-color: green;
+	}
+	.titulo{
+		font-size: 1.5rem;
+	}
+	.grid-container{
+		width: 90vw;
+		height: 80vh;
+	}
+	.mensaje{
+		font-size: 1rem;
+	}
+
+/* ------------------result.html------------------------------ */
+
+	.tabla{
+		font-size: 0.6rem;
+
+	}
+
+	.resul{
+		font-size: 0.6rem;
+
+	}
+
+	.titulo-r{
+		font-size: 1rem;
+	}
+
+	.temp{
+		font-size: 0.8rem;
+		padding: 0 10px;
+
+	}
+}
+
+@media screen and (min-aspect-ratio: 2/1) and (max-device-height: 480px){
+	body{
+		background-color: blue;
+	}
+	.titulo{
+		font-size: 1.2rem;
+	}
+	.mensaje{
+		font-size: 0.8rem;
+	}
+
+/* ------------------resul.html----------------- */
+	.grid-box{
+		display: grid;
+		grid-template: 7% 25% 8% 60% / 100%;
+	}
+
+	.titulo-r{
+		padding: 0;
+		font-size: 1rem;
+	}
+
+	.temp{
+		font-size: 0.8rem;
+		padding: 0;
+
+	}
+	
+	.resul{
+		font-size: 0.6rem;
+		padding: 0;
+
+	}
+
+	#tabla-r{
+		font-size: 0.5rem;
+
+	}
+
+	.sendbutton, .volverboton{
+		font-size:8px;
+
+	}
+
+	.titulo-tabla{
+		/* visibility: hidden; */
+		font-size: 0.4rem;
+	}
+
+	.tabla{
+
+		flex-direction: column;
+	}
 }
