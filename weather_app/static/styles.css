@@ -121,8 +121,6 @@ body {
 	grid-template: 8% 25% 7% 60% / 100%;
 	width: 90vw;
 	height: 90vh;
-	/* min-width: 500px;
-	min-height: 600px; */
 	max-width: 650px;
 	max-height: 700px;
 	border: 1px solid black;
@@ -230,19 +228,7 @@ tr:first-child {
 
 /* ------------------------media queries----------------------------- */
 
-@media screen and (min-aspect-ratio: 1/1){
-	/* body{
-		background-color: orangered;
-	} */
-	/* .titulo{
-		font-size: 1rem;
-	} */
-}
-
 @media screen and (max-aspect-ratio: 1/1) and (max-device-width: 600px){
-	body{
-		background-color: green;
-	}
 	.titulo{
 		font-size: 1.5rem;
 	}
@@ -278,9 +264,6 @@ tr:first-child {
 }
 
 @media screen and (min-aspect-ratio: 2/1) and (max-device-height: 480px){
-	body{
-		background-color: blue;
-	}
 	.titulo{
 		font-size: 1.2rem;
 	}
